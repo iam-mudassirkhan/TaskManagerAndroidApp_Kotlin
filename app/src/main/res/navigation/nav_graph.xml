@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/taskListFragment">
+
+    <fragment
+        android:id="@+id/taskListFragment"
+        android:name="com.mudassir.taskmanagerapp.ui.fragments.TaskListFragment"
+        android:label="fragment_task_list"
+        tools:layout="@layout/fragment_task_list">
+
+        <action
+            android:id="@+id/action_taskListFragment_to_taskDetailsFragment"
+            app:destination="@id/taskDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createTaskFragment"
+        android:name="com.mudassir.taskmanagerapp.ui.fragments.CreateTaskFragment"
+        android:label="fragment_creat_tast"
+        tools:layout="@layout/fragment_creat_tast" />
+
+    <fragment
+        android:id="@+id/taskDetailsFragment"
+        android:name="com.mudassir.taskmanagerapp.ui.fragments.TaskDetailsFragment"
+        android:label="fragment_task_details"
+        tools:layout="@layout/fragment_task_details">
+
+        <argument
+            android:name="task"
+            app:argType="com.mudassir.taskmanagerapp.domain.model.Task" />
+    </fragment>
+</navigation>

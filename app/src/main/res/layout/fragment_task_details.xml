@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.TaskDetailsFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgTask"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+            android:textColor="?attr/colorOnSurface"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"/>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+            android:layout_marginTop="8dp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+            android:layout_marginTop="8dp"
+            android:textColor="?attr/colorSecondary"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
